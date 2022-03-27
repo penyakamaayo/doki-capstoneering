@@ -1,8 +1,6 @@
-<div id="wrapper">
-	<% content_for(:sidebar) do %>
-		<%= render 'layouts/sidebar' %>
-	<% end %>
-	<div class="d-flex flex-column" id="content-wrapper">
+<div style="display:flex;">
+	<%= render 'layouts/sidebar' %>
+	<div class="d-flex flex-column" id="content-wrapper" style="background-color:#f8f9fc;width:100%;overflow-x:hidden;">
 		<div id="content">
 			<nav class="navbar navbar-light navbar-expand shadow mb-4 topbar static-top bg-gradient-primary">
 				<div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
@@ -87,7 +85,7 @@
 						<div class="card-body">
 							<div class="row align-items-center no-gutters">
 								<div class="col mr-2">
-									<div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span class="testing-ni">Appointments</span></div>
+									<div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>Appointments</span></div>
 									<div class="text-dark font-weight-bold h5 mb-0 db-amt"><span>2<br></span></div>
 								</div>
 								<div class="col-auto"><i class="fas fa-calendar-plus fa-2x text-gray-300"></i></div>
