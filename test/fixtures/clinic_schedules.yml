@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  day: MyString
+  start_time: 2022-03-27 16:25:48
+  end_time: 2022-03-27 16:25:48
+  clinic: one
+
+two:
+  day: MyString
+  start_time: 2022-03-27 16:25:48
+  end_time: 2022-03-27 16:25:48
+  clinic: two

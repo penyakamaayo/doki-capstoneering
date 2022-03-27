@@ -22,4 +22,17 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  enum role: { patient: 1, doctor: 2, secretary: 3 }
+
+  def fullname
+    @fullname ||= firstname + " " + lastname
+  end
+
+  def appointments_in_a_day datetime
+    start_of_day = datetime.beginning_of_day
+    end_of_day = datetime.end_of_day
+    user_appointments = self.appointments.where("schedule >= ? and schedule <= ?", start_of_day, end_of_day)
+
+    user_appointments.count
+  end
 end
