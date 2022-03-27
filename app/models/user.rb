@@ -23,6 +23,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   enum role: { patient: 1, doctor: 2, secretary: 3 }
+  has_many :appointments, dependent: :destroy
 
   def fullname
     @fullname ||= firstname + " " + lastname
