@@ -19,6 +19,7 @@
 #
 class Doctor < User
   has_many :appointments
+  has_many :clinics
 
   def self.default_scope
     where(role: 2)

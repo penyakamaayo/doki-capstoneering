@@ -24,6 +24,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   enum role: { patient: 1, doctor: 2, secretary: 3 }
   has_many :appointments, dependent: :destroy
+  has_many :clinics, dependent: :destroy
 
   def fullname
     @fullname ||= firstname + " " + lastname
