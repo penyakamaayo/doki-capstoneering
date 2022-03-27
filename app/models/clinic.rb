@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: clinics
+#
+#  id         :bigint           not null, primary key
+#  name       :string
+#  user_id    :bigint           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
 class Clinic < ApplicationRecord
   belongs_to :user
   belongs_to :doctor, class_name: 'User', foreign_key: 'user_id'

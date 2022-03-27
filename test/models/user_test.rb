@@ -9,7 +9,7 @@
 #  lastname               :string           default("")
 #  birthdate              :date
 #  gender                 :string
-#  role                   :integer
+#  role                   :integer          default("patient")
 #  reset_password_token   :string
 #  reset_password_sent_at :datetime
 #  remember_created_at    :datetime
