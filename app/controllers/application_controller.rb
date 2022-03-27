@@ -3,13 +3,12 @@ class ApplicationController < ActionController::Base
 
 	def after_sign_in_path_for(resource)
     # Here you can write logic based on roles to return different after sign in paths
-    root_path
-    # if current_user.doctor?
-    # elsif current_user.patient?
-    #   patient_appointments_path
-    # else
-    #   home_index_path
-    # end
+    if current_user.patient?
+      patient_dashboard_path
+    elsif current_user.doctor?
+      # doctor_dashboard_path
+    else
+    end
   end
 
 	protected
